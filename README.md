@@ -8,7 +8,7 @@
   <h3 align="center">ec2 with terraform</h3>
 
   <p align="center">
-    Terraform template to create a single ec2 instance
+    Terraform template to create a single EC2 instance.
     <br />
     <br />
   </p>
@@ -17,7 +17,7 @@
 <!-- ABOUT -->
 ## About
 
-LONG DESCRIPTION
+This template will create a single EC2 instance with Terraform. The repository documents what the files do and what commands to run in order to successfully provision the EC2 instance. 
 
 ### Built With
 
@@ -33,8 +33,8 @@ LONG DESCRIPTION
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-1. Insert AWS credentials to dev.conf
-2. Add the S3 Bucket where the .tfstate will be stored
+1. Insert AWS credentials to dev.conf and dev.tfvars
+2. Add the S3 Bucket where the .tfstate will be stored in dev.conf
 3. Pick your ami ID and copy it into main.tf
 4. Copy your key name into main.tf
 5. Add your security group(s) into main.tf
@@ -49,7 +49,7 @@ terraform init --backend-config=config/dev.conf
 Output the plan:
 
 ```bash
-terraform plan
+terraform plan --var-file=config/dev.tfvars
 ```
 
 Terraform will check the current state and attempt to match the desired state. 
@@ -57,7 +57,7 @@ Terraform will check the current state and attempt to match the desired state.
 Save the plan to a file:
 
 ```bash
-terraform plan -out myplan
+terraform plan -out myplan --var-file=config/dev.tfvars
 ```
 
 Apply the changes:
