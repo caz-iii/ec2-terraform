@@ -3,9 +3,8 @@
 <!-- HEADER -->
 <br />
 <div align="center">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
 
-  <h3 align="center">ec2 with terraform</h3>
+  <h1 align="center">EC2 with Terraform</h1>
 
   <p align="center">
     Terraform template to create a single EC2 instance.
@@ -37,7 +36,7 @@ This template will create a single EC2 instance with Terraform. The repository d
 2. Add the S3 Bucket where the .tfstate will be stored in dev.conf
 3. Pick your ami ID and copy it into main.tf
 4. Copy your key name into main.tf
-5. Add your security group(s) into main.tf
+5. Add your security group(s) into main.tf (optional)
 6. Run the following commands
 
 Initialize Terraform with our config:
